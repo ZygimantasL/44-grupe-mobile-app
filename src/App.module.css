@@ -1,0 +1,23 @@
+.app{
+  display: grid;
+  gap: 3rem;
+  padding: 3rem;
+  justify-content: center;
+}
+
+.form {
+  display: grid;
+  gap: 1rem;
+}
+
+.form .row{
+  display: grid;
+  gap: 0.5rem;
+}
+
+.form label{
+  font-size: 2rem;
+}
+.preview {
+  font-size: 4rem;
+}
