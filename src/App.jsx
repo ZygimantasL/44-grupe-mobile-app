@@ -7,8 +7,9 @@ function App() {
     function updateName(event) {
         setName(event.target.value);
     }
-
-    //DOM.addEventListener('click', (event)=> {/* ... */});
+    function updateSurname(event) {
+        setSurname(event.target.value);
+    }
     return(
         <div className={style.app}>
             <form className={style.form}>
@@ -18,7 +19,7 @@ function App() {
                 </div>
                 <div className={style.row}>
                 <label htmlFor='surname'>Surame</label>
-                <input onChange={(e)=> setSurname(e.target.value )} id='surname' type="text" required placeholder='Your surname here' />
+                <input onChange={updateSurname} id='surname' type="text" required placeholder='Your surname here' />
                 </div>
                 <div className={style.row}>
                 <button type='submit'>Create</button>
