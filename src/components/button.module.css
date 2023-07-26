@@ -2,12 +2,12 @@
     padding: 1.2rem 1.2rem;
     font-size: 1.2rem;
     font-weight: 700;
-    background-color: #EF9296;
+    background-color: #B2F2BB;
     border: none;
-    border-radius: 8px;
-    margin-top:10px;
+    border-radius: 1rem;
+    margin-top:0.9rem;
     text-decoration: none;
-    cursor: pointer;
-    box-shadow: #ffffff 0px 0px 0.2px 1px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    cursor:crosshair;
+    box-shadow: #8DEF9A 0px 0px 0.2px 1px;
+    font-family:inherit;
   }

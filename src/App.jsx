@@ -1,31 +1,31 @@
-import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import style from  './App.module.css';
+import { Home } from "./pages/Home/Home";
+import { Login } from "./pages/Login/Login";
+import { NoPage } from "./pages/404/404";
+import { Service1 } from "./pages/features/feature1";
+import { Service2 } from "./pages/features/feature2";
+import { Service3 } from "./pages/features/feature3";
+// import { About } from "./pages/About";
+// import { Services } from "./pages/Services";
+
+// import { Layout } from "./layout/Layout";
+// import { Layout2 } from "./layout/Layout2";
 
 function App() {
-    const [name, setName] = useState('');;
-    const [surname, setSurname]= useState('');
-    function updateName(event) {
-        setName(event.target.value);
-    }
-    function updateSurname(event) {
-        setSurname(event.target.value);
-    }
+
     return(
         <div className={style.app}>
-            <form className={style.form}>
-                <div className={style.row}>
-                <label htmlFor='name'>Name</label>
-                <input onChange={updateName} value={name} id='name' type="text" required placeholder='Your name here' />
-                </div>
-                <div className={style.row}>
-                <label htmlFor='surname'>Surame</label>
-                <input onChange={updateSurname} id='surname' type="text" required placeholder='Your surname here' />
-                </div>
-                <div className={style.row}>
-                <button type='submit'>Create</button>
-                </div>
-            </form>'
-            <div className={style.preview}>"{`${name} ${surname}`.trim() }"</div>
+        <BrowserRouter>
+        <Routes>
+        <Route index path='/' element={<Home />} />
+        <Route index path='/service1' element={<Service1 />} />
+        <Route index path='/service2' element={<Service2 />} />
+        <Route index path='/service3' element={<Service3 />} />
+        <Route index path='/Login' element={<Login />} />
+        <Route index path='*' element={<NoPage />} />        
+        </Routes>
+        </BrowserRouter>    
         </div>
     )
     
