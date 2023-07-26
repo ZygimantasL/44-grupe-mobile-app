@@ -9,7 +9,7 @@ export function Service1() {
       <div className={style.Home}>
       <img src={Logo} alt="service1" className={style.logo} />
       <h1 className={style.heading}>Feature-1</h1>
-      <Link className={btn.button} to="../Service2">Next</Link>
+      <Link className={btn.button} to="../Service2">Continue</Link>
     </div>
   );
   };
