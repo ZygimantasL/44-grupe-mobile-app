@@ -66,7 +66,7 @@ Would like to run this project locally? Open terminal and follow these steps:
 There is no tests for this project.
 
 ## 🌞 Author
-Žygimantas: [Github](https://github.com/ZygimantasL)\
+Žygimantas: [Github](https://github.com/ZygimantasL)
 
 ## ⚠️ License
 
