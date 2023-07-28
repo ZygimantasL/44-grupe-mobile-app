@@ -30,20 +30,25 @@ function registerUser(e) {
   const maxUsernameLength = 20;
   const minPasswordLength = 6;
   const maxPasswordLength = 100;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   e.preventDefault();
 
   const newErrors = [];
   if (username.length < minUsernameLength || username.length > maxUsernameLength) {
       newErrors.push('klaida: username...');
   }
+  if (!emailRegex.test(email)){
+    console.log(!'blogas email')
+    newErrors.push("blogai nurodytas email...");
+  }
 
   if (password.length < minPasswordLength || password.length > maxPasswordLength) {
       newErrors.push('klaida: password...');
   }
+  
 
   setErrors(newErrors);
-
-  if (!errors.length) {
+  if (!newErrors.length) {
       setUsers((prev) => [...prev, { username, email, password }]);
   }
 }
