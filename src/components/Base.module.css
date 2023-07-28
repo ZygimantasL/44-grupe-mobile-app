@@ -3,13 +3,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
     padding: 20px;
     color: #ffffff;
-  
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
     box-sizing: border-box;
     text-align: center;
-    background: #FFD8DA;
+    background-size: 100vw;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
   
@@ -43,4 +42,8 @@
 }
 .error.show {
     display: block;
+}
+.or{
+  font-size: 1.2rem;
+  font-weight: 600;
 }
