@@ -6,7 +6,9 @@ import { NoPage } from "./pages/404/404";
 import { Service1 } from "./pages/features/feature1";
 import { Service2 } from "./pages/features/feature2";
 import { Service3 } from "./pages/features/feature3";
-// import { About } from "./pages/About";
+import { Register } from "./pages/register/register";
+import { TOS } from "./pages/register/Tos";
+
 // import { Services } from "./pages/Services";
 
 // import { Layout } from "./layout/Layout";
@@ -22,6 +24,8 @@ function App() {
         <Route index path='/service1' element={<Service1 />} />
         <Route index path='/service2' element={<Service2 />} />
         <Route index path='/service3' element={<Service3 />} />
+        <Route index path='/Register' element={<Register />} />
+        <Route index path='/Tos' element={<TOS />} />
         <Route index path='/Login' element={<Login />} />
         <Route index path='*' element={<NoPage />} />        
         </Routes>
