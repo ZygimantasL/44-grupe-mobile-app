@@ -1,0 +1,18 @@
+.slidersContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .slider {
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid black;
+  }
+  
+  .slider.active {
+    background-color: #B2F2BB;
+  }
