@@ -53,9 +53,9 @@ function registerUser(e) {
                 <img src={Logo} alt="Logo" className={style.logo} />
                 <h1 className={style.heading}>Create your account</h1>
                 <h1>Register ({users.length})</h1>
-                  <div className={`${style.error} ${errors.length ? style.show : ''}`}>
-                   {errors.map(err => <p>{err}</p>)}
-                    </div>
+                <div className={`${style.error} ${errors.length ? style.show : ''}`}>
+                {errors.map(err => <p>{err}</p>)}
+                </div>
                 <div className={style.row}>
                 <label htmlFor='name'>Name</label>
                 <input onChange={updateName} value={username} id='name' type="text" required placeholder='Your name here' />
@@ -69,7 +69,7 @@ function registerUser(e) {
                 <input onChange={updatePassword} id='password' type="password" required placeholder='Your password here' />
                 </div>
                 <div className={btn.button}>
-                <a type='submit' className='btn'>Register!</a>
+                <button onClick={registerUser} type='submit' className='btn'>Register!</button>
                 </div>
                 <p className={style.or}>or</p>
                 <Link to='/Login' className={btn.button} >Login</Link>
