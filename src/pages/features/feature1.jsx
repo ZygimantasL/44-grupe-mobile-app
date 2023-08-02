@@ -10,6 +10,7 @@ export function Service1() {
       <div className={style.Home}>
       <img src={Logo} alt="service1" className={style.logo} />
       <Slider />
+      <p className={style.skip} onClick={() => window.location.href = '../Register'}>skip</p>
       <h1 className={style.heading}>Feature-1</h1>
       <Link className={btn.button} to="../Service2">Continue</Link>
     </div>

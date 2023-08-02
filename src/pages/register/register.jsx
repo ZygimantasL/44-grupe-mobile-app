@@ -30,21 +30,38 @@ function registerUser(e) {
   const maxUsernameLength = 20;
   const minPasswordLength = 6;
   const maxPasswordLength = 100;
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const forbiddenSymbols = ['<', '>', '(', ')', '[', ']', ',', ';', ':', '\\', '"', '!', '#', '$', '%', '^', '&', '*','{', '}'];
   e.preventDefault();
 
   const newErrors = [];
   if (username.length < minUsernameLength || username.length > maxUsernameLength) {
       newErrors.push('klaida: username...');
   }
-  if (!emailRegex.test(email)){
-    console.log(!'blogas email')
-    newErrors.push("blogai nurodytas email...");
+  
+  
+  if (!email){
+    console.log('nepateiktas email')
+    newErrors.push("nenurodytas email");
+  } else if(email.indexOf('@')<2||email.indexOf('..')!==-1){
+    newErrors.push('blogai nurodytas email...')
+  } else for (const symbol of forbiddenSymbols){
+            if(email.includes(symbol)){
+              newErrors.push('Panaudoti neleistini symboliai')
+              console.log("EWWW 404")
+            }
   }
+
 
   if (password.length < minPasswordLength || password.length > maxPasswordLength) {
       newErrors.push('klaida: password...');
+  } else if (password === email || password === username){
+      newErrors.push('Slaptažodis negali sutapti su el. paštu arba username')
+  } else for (const symbol of forbiddenSymbols){
+    if(password.includes(symbol)){
+    newErrors.push('Panaudoti neleistini symboliai')
+    console.log("EWWW 405")
   }
+}
   
 
   setErrors(newErrors);
