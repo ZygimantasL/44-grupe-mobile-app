@@ -90,9 +90,7 @@ function registerUser(e) {
                 <label htmlFor='password'>Password</label>
                 <input onChange={updatePassword} id='password' type="password" required placeholder='Your password here' />
                 </div>
-                <div className={btn.button}>
-                <button onClick={registerUser} type='submit' className='btn'>Register!</button>
-                </div>
+                <p onClick={registerUser} type='submit' className={btn.button}>Register!</p>
                 <p className={style.or}>or</p>
                 <Link to='/Login' className={btn.button} >Login</Link>
             </form>
